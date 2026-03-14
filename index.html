@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TerraVerify - Premium Land Records and Property Verification Portal. Search land titles, survey numbers, and ownership records securely.">
+    <title>TerraVerify | Premium Land Records Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">▲</span>
+                <span class="logo-text">TERRA<span>VERIFY</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Search Records</a></li>
+                <li><a href="#">Verify Title</a></li>
+                <li><a href="#">Digital Maps</a></li>
+                <li><a href="#" class="btn-primary">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Secure & Transparent <br><span class="highlight">Land Records</span> Portal</h1>
+            <p class="hero-subtitle">Access verified property ownership, survey data, and digital maps with military-grade precision and transparency.</p>
+            
+            <div class="search-box">
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-tab="survey">By Survey No.</button>
+                    <button class="tab-btn" data-tab="owner">By Owner Name</button>
+                    <button class="tab-btn" data-tab="location">By Location</button>
+                </div>
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" placeholder="Enter survey number (e.g., 402/A)...">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        Search
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">1.2M+</span>
+                    <span class="stat-label">Verified Records</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">450k</span>
+                    <span class="stat-label">Square KM Mapped</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Instant</span>
+                    <span class="stat-label">Verification</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Services</h2>
+                <p>Advanced tools for land management and verification</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Title Search</h3>
+                    <p>Trace property history and ownership transitions back 30 years with a single click.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>Digital Mapping</h3>
+                    <p>High-resolution satellite overlays integrated with official cadastral survey maps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Legal Verification</h3>
+                    <p>Automated checks for encumbrances, litigations, and government restrictions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recent-records">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Transactions</h2>
+                <p>Real-time updates from the land registry office</p>
+            </div>
+            <div class="records-table-wrapper">
+                <table class="records-table">
+                    <thead>
+                        <tr>
+                            <th>Survey ID</th>
+                            <th>District</th>
+                            <th>Area (Acres)</th>
+                            <th>Owner</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsBody">
+                        <!-- Content via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">▲</span>
+                    <span class="logo-text">TERRA<span>VERIFY</span></span>
+                </div>
+                <p>The gold standard in digital land records and property transparency.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Verification</a></li>
+                    <li><a href="#">API Access</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Legal Info</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 TerraVerify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Details Modal -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle">Property Details</h2>
+                <span id="modalStatus" class="status-badge"></span>
+            </div>
+            <div class="modal-body">
+                <div class="details-grid">
+                    <div class="details-text">
+                        <div class="detail-group">
+                            <label>Owner Name</label>
+                            <p id="detailOwner" class="detail-value"></p>
+                        </div>
+                        <div class="detail-group">
+                            <label>Survey ID</label>
+                            <p id="detailId" class="detail-value"></p>
+                        </div>
+                        <div class="detail-group">
+                            <label>District</label>
+                            <p id="detailDistrict" class="detail-value"></p>
+                        </div>
+                        <div class="detail-group">
+                            <label>Land Area</label>
+                            <p id="detailArea" class="detail-value"></p>
+                        </div>
+                        <div class="detail-group">
+                            <label>Land Type</label>
+                            <p class="detail-value">Agricultural / Commercial</p>
+                        </div>
+                        <div class="detail-group">
+                            <label>Last Verified</label>
+                            <p class="detail-value">March 10, 2026</p>
+                        </div>
+                    </div>
+                    <div class="details-map">
+                        <label>Land Outmap (Survey Visualization)</label>
+                        <div class="map-container">
+                            <img id="detailMap" src="" alt="Land map visualization">
+                            <div class="map-overlay">
+                                <span>GPS Verified Plot</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary" onclick="window.print()">Download Certificate</button>
+                    <button class="btn-outline" id="closeModalBtn">Close Portfolio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
